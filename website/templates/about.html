@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/about.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='styles/styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='styles/about.css') }}"
+    />
     <title>Heart Attack</title>
     <!-- Bootstrap CSS -->
     <link
@@ -14,147 +20,173 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div id="root">
-        <!--* NAVBAR -->
-        <nav class="navbar navbar-expand-lg text-light bg-dark sticky-top">
-          <div class="container-fluid CustomNavbar">
-            <a class="navbar-brand text-light NavBrand" href="#home">
-              In a Heart Beat
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-light" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active text-light text-light NavText NavLink"
-                    aria-current="page"
-                    href="{{url_for('home_page')}}"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-light NavText NavLink"
-                    href="{{url_for('home_page')}}"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-light NavText NavLink"
-                    href="{{url_for('blog_page')}}"
-                  >
-                    Dietary Plans
-                  </a>
-                </li>
-                <li class="nav-item">
-                    <a
-                      class="nav-link text-light NavText NavLink"
-                      href="{{url_for('about_page')}}"
-                    >
-                      About
-                    </a>
-                  </li>
-              </ul>
-            </div>
+      <!--* NAVBAR -->
+      <nav class="navbar navbar-expand-lg text-light bg-dark sticky-top">
+        <div class="container-fluid CustomNavbar">
+          <a class="navbar-brand text-light NavBrand" href="#home">
+            In a Heart Beat
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-light" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light text-light NavText NavLink"
+                  aria-current="page"
+                  href="{{url_for('home_page')}}"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light NavText NavLink"
+                  href="{{url_for('home_page')}}"
+                >
+                  Features
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light NavText NavLink"
+                  href="{{url_for('blog_page')}}"
+                >
+                  Dietary Plans
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light NavText NavLink"
+                  href="{{url_for('about_page')}}"
+                >
+                  About
+                </a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </div>
-    
+        </div>
+      </nav>
+      {% comment %}
+    </div>
+    {% endcomment %}
+
     <div class="#About" id="about">
-        
-        <img src="{{url_for('static', filename='images/HeartStethoscope.jpg')}}" alt="Hearty" class="intro">
-        During recent years,the rate of heart attacks has been on the rise.In India alone,there were arround 28,449 deaths due to heart attacks.
-
-        Most people are apprehensive to visit a gloom environment like that of a hospital,so our product aims to eliminate the unease and instill comfort.
-
-        Our interactive website allows the user to enter his medical details such as oxygen %,heart rate,etc. and submit it.Our pre-trained machine learning model will accurately predict whether the person will get heart attack or not .Based on the 
-        result appropriate course of action will be provided to the users.
-
-        The number of heart attacks in 2021 were 1.6 per cent more than that during 2019. Also, the number of deaths due to heart attacks in 2021 was less than that in 2020. From 2017 to 2021, there was a 22 per cent increase in death due to heart attacks. In the last 10 years, from 2012 to 2021, there had been a 54 per cent increase in heart attack deaths, according to the NCRB. 
+      <img
+        src="{{url_for('static', filename='images/HeartStethoscope.jpg')}}"
+        alt="Hearty"
+        class="intro"
+      />
+      During recent years,the rate of heart attacks has been on the rise.In
+      India alone,there were arround 28,449 deaths due to heart attacks. Most
+      people are apprehensive to visit a gloom environment like that of a
+      hospital,so our product aims to eliminate the unease and instill comfort.
+      Our interactive website allows the user to enter his medical details such
+      as oxygen %,heart rate,etc. and submit it.Our pre-trained machine learning
+      model will accurately predict whether the person will get heart attack or
+      not .Based on the result appropriate course of action will be provided to
+      the users. The number of heart attacks in 2021 were 1.6 per cent more than
+      that during 2019. Also, the number of deaths due to heart attacks in 2021
+      was less than that in 2020. From 2017 to 2021, there was a 22 per cent
+      increase in death due to heart attacks. In the last 10 years, from 2012 to
+      2021, there had been a 54 per cent increase in heart attack deaths,
+      according to the NCRB.
     </div>
 
-    
-        <h3 class="definition"> Heart Attack!-What is this?</h3>
-        <div class="discri">
-            <img src="{{url_for('static', filename='images/depositphotos_6499876-stock-photo-heart-care.jpg')}}" alt="hearty">
-       
-      <p> A heart attack occurs when the flow of blood to the heart is severely reduced or blocked. The blockage is usually due to a buildup of fat, cholesterol and other substances in the heart (coronary) arteries. The fatty, cholesterol-containing deposits are called plaques. The process of plaque buildup is called atherosclerosis.
+    <div>
+      <h3 class="definition">Heart Attack!-What is this?</h3>
+      <div class="discri">
+        <img
+          src="{{url_for('static', filename='images/depositphotos_6499876-stock-photo-heart-care.jpg')}}"
+          alt="hearty"
+        />
 
-       Sometimes, a plaque can rupture and form a clot that blocks blood flow. A lack of blood flow can damage or destroy part of the heart muscle.
-       
-       A heart attack is also called a myocardial infarction.
-       
-       Prompt treatment is needed for a heart attack to prevent death. <br>
-    </p>
-</div>
-<h3 class="causes">Why it has become a major problem?</h3>
+        <p>
+          A heart attack occurs when the flow of blood to the heart is severely
+          reduced or blocked. The blockage is usually due to a buildup of fat,
+          cholesterol and other substances in the heart (coronary) arteries. The
+          fatty, cholesterol-containing deposits are called plaques. The process
+          of plaque buildup is called atherosclerosis. Sometimes, a plaque can
+          rupture and form a clot that blocks blood flow. A lack of blood flow
+          can damage or destroy part of the heart muscle. A heart attack is also
+          called a myocardial infarction. Prompt treatment is needed for a heart
+          attack to prevent death. <br />
+        </p>
+      </div>
+    </div>
+    <h3 class="causes">Why it has become a major problem?</h3>
     <div class="happen">
-       
-        <img src="{{url_for('static', filename='images/g-Plainfct25Jul-(Stroke-related-deaths)web-khoD--621x414@LiveMint.webp')}}" alt="ashiq">
-       <p>
-        A heart attack in someone under the age of 40 was extremely uncommon, but now one in every five-heart attack patient are under the age of 40.
-
-        Common causes of heart attack among patients aged less than 35 can be due to: 
-
-(1) Poor Lifestyle Routine
-
-(2) Excessive drinking and smoking
-
-(3) Overweight
-
-(4) Stress
-
-(5) Hypertension, and
-
-(6) Diabetes
-
-The prevalence of coronary heart disease in young adults has slowly increased due to smoking, obesity, lack of physical activity, and other reasons that put pressure on the cardiovascular system. The heart is one of the vital organs of the human body, without which the body has no meaning. When the arteries that carry oxygen-rich blood gets blocked, it interrupts the blood flow or can stop it completely, resulting in a heart attack.
-       </p>
-
+      <img
+        src="{{url_for('static', filename='images/g-Plainfct25Jul-(Stroke-related-deaths)web-khoD--621x414@LiveMint.webp')}}"
+        alt="ashiq"
+      />
+      <p>
+        A heart attack in someone under the age of 40 was extremely uncommon,
+        but now one in every five-heart attack patient are under the age of 40.
+        Common causes of heart attack among patients aged less than 35 can be
+        due to: (1) Poor Lifestyle Routine (2) Excessive drinking and smoking
+        (3) Overweight (4) Stress (5) Hypertension, and (6) Diabetes The
+        prevalence of coronary heart disease in young adults has slowly
+        increased due to smoking, obesity, lack of physical activity, and other
+        reasons that put pressure on the cardiovascular system. The heart is one
+        of the vital organs of the human body, without which the body has no
+        meaning. When the arteries that carry oxygen-rich blood gets blocked, it
+        interrupts the blood flow or can stop it completely, resulting in a
+        heart attack.
+      </p>
     </div>
     <h3 class="symptoms">Symptoms</h3>
     <div class="symp">
-       <img src="{{url_for('static', filename='images/19.07_smoking-CVD (1).png')}}" alt="kl">
-       <p>
-        The major symptoms of a heart attack are
+      <img
+        src="{{url_for('static', filename='images/19.07_smoking-CVD (1).png')}}"
+        alt="kl"
+      />
+      <p>
+        The major symptoms of a heart attack are Chest pain or discomfort. Most
+        heart attacks involve discomfort in the center or left side of the chest
+        that lasts for more than a few minutes or that goes away and comes back.
+        The discomfort can feel like uncomfortable pressure, squeezing,
+        fullness, or pain. Feeling weak, light-headed, or faint. You may also
+        break out into a cold sweat. Pain or discomfort in the jaw, neck, or
+        back. Pain or discomfort in one or both arms or shoulders. Shortness of
+        breath. This often comes along with chest discomfort, but shortness of
+        breath also can happen before chest discomfort.
+      </p>
 
-Chest pain or discomfort. Most heart attacks involve discomfort in the center or left side of the chest that lasts for more than a few minutes or that goes away and comes back. The discomfort can feel like uncomfortable pressure, squeezing, fullness, or pain.
-Feeling weak, light-headed, or faint. You may also break out into a cold sweat.
-Pain or discomfort in the jaw, neck, or back.
-Pain or discomfort in one or both arms or shoulders.
-Shortness of breath. This often comes along with chest discomfort, but shortness of breath also can happen before chest discomfort.
-       </p>
-
-       <h3 class="consequence">
-            What is the consequence?
-       </h3>
-       <div class="conse">
-        <img src="{{url_for('static', filename='images/heartdiseaserisk.jpg')}}" alt="al">
-       <p>
-        If you’ve had a heart attack, your heart may be damaged. This could affect your heart’s rhythm and its ability to pump blood to the rest of the body. You may also be at risk for another heart attack or conditions such as stroke, kidney disorders, and peripheral arterial disease (PAD).
-       </p>
+      <h3 class="consequence">What is the consequence?</h3>
+      <div class="conse">
+        <img
+          src="{{url_for('static', filename='images/heartdiseaserisk.jpg')}}"
+          alt="al"
+        />
+        <p>
+          If you've had a heart attack, your heart may be damaged. This could
+          affect your heart's rhythm and its ability to pump blood to the rest
+          of the body. You may also be at risk for another heart attack or
+          conditions such as stroke, kidney disorders, and peripheral arterial
+          disease (PAD).
+        </p>
+      </div>
     </div>
 
-
- <script>   src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"
-  </script>
-    
-</body>
+    <script>
+      src =
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js";
+      integrity =
+        "sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4";
+      crossorigin = "anonymous";
+    </script>
+  </body>
 </html>

@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, DecimalField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError, Regexp
 
+
 class DataForm(FlaskForm):
 
     age = StringField(label='Age')
@@ -13,4 +14,3 @@ class DataForm(FlaskForm):
     thall = StringField(label='thalassemia')
     oldpeak = StringField(label='oldpeak')
     submit = SubmitField(label='Create Account')
-    
