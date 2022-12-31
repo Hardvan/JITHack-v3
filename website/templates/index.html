@@ -1,230 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>In a Heart Beat</title>
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="https://cdn-icons-png.flaticon.com/512/2883/2883911.png"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <!-- Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static',filename='styles/styles.css') }}"
-    />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+NP+Hmong:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <div id="home">
-      <!--* NAVBAR -->
-      <nav class="navbar navbar-expand-lg text-light bg-dark sticky-top">
-        <div class="container-fluid CustomNavbar">
-          <a class="navbar-brand text-light NavBrand" href="#home">
-            In a Heart Beat
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse text-light" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-light text-light NavText NavLink"
-                  aria-current="page"
-                  href="#home"
-                >
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light NavText NavLink" href="#features">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light NavText NavLink"
-                  href="{{url_for('blog_page')}}"
-                >
-                  Dietary Plans
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light NavText NavLink"
-                  href="{{url_for('about_page')}}"
-                >
-                  About
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!--* Carousel -->
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide carousel-fade"
-        data-bs-ride="false"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="{{url_for('static', filename='images/img1.jpg')}}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block CarouselText">
-              <h5>Heart Attack-Major Evil Nowadays.</h5>
-
-              <p>
-                A heart attack is a medical emergency. A heart attack usually
-                occurs when a blood clot blocks blood flow to the heart. Without
-                blood, tissue loses oxygen and dies.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="{{url_for('static', filename='images/img2.jpg')}}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block CarouselText">
-              <h5>Can We diagonise it technically?</h5>
-              <p>
-                A handly method is implemented by us where we can predict the
-                heart attack possibility of the person using Machine Learning
-                and Deep Learning
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="{{url_for('static', filename='images/img3.jpg')}}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block CarouselText">
-              <h5>Keeping Oneself Healthy</h5>
-              <p>
-                Eating an unhealthy diet that is high in fat will make hardening
-                of the arteries (atherosclerosis) worse and increase your risk
-                of a heart attack. Continuing to eat high-fat foods will cause
-                more fatty plaques to build up in your arteries.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+{% extends 'base.html' %} {% block content %}
+<div id="home">
+  <!--* Carousel -->
+  <div
+    id="carouselExampleCaptions"
+    class="carousel slide carousel-fade"
+    data-bs-ride="false"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
     </div>
-
-    <!--* Welcome -->
-    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark Welcome">
-      <div class="">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
         <img
-          src="https://cdn.pixabay.com/photo/2020/04/22/19/29/heart-5079717__340.png"
-          class="WelcomeImage"
+          src="{{url_for('static', filename='images/img1.jpg')}}"
+          class="d-block w-100"
+          alt="..."
         />
-        <h1 class="display-4 font-italic WelcomeTitle">Welcome!</h1>
-        <div class="WelcomePara">
-          <p class="lead my-3">
-            In a Heartbeat is a website that aims to predict whether a person is
-            at risk of getting a heart attack or not with the power of machine
-            learning.
+        <div class="carousel-caption d-none d-md-block CarouselText">
+          <h5>Heart Attack-Major Evil Nowadays.</h5>
+
+          <p>
+            A heart attack is a medical emergency. A heart attack usually occurs
+            when a blood clot blocks blood flow to the heart. Without blood,
+            tissue loses oxygen and dies.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{url_for('static', filename='images/img2.jpg')}}"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block CarouselText">
+          <h5>Can We diagonise it technically?</h5>
+          <p>
+            A handly method is implemented by us where we can predict the heart
+            attack possibility of the person using Machine Learning and Deep
+            Learning
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{url_for('static', filename='images/img3.jpg')}}"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block CarouselText">
+          <h5>Keeping Oneself Healthy</h5>
+          <p>
+            Eating an unhealthy diet that is high in fat will make hardening of
+            the arteries (atherosclerosis) worse and increase your risk of a
+            heart attack. Continuing to eat high-fat foods will cause more fatty
+            plaques to build up in your arteries.
           </p>
         </div>
       </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
 
-    <!--* Description -->
-    <!-- <div class="card-group" id="features">
-      <div class="card">
-        <img
-          class="card-img-top CardImage"
-          src="{{url_for('static', filename='images/HeartStethoscope.jpg')}}"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title CardTitle">Brief Intro</h5>
-          <p class="card-text CardText">
+<!--* Welcome -->
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark Welcome">
+  <div class="">
+    <img
+      src="https://cdn.pixabay.com/photo/2020/04/22/19/29/heart-5079717__340.png"
+      class="WelcomeImage"
+    />
+    <h1 class="display-4 font-italic WelcomeTitle">Welcome!</h1>
+    <div class="WelcomePara">
+      <p class="lead my-3">
+        In a Heartbeat is a website that aims to predict whether a person is at
+        risk of getting a heart attack or not with the power of machine
+        learning.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--* Description v2 -->
+<div class="ColorGroup" id="features">
+  <div class="CustomContainer">
+    <div class="CustomCard">
+      <div class="face face1">
+        <div class="content">
+          <span class="stars"></span>
+          <h2 class="java">Brief Intro</h2>
+          <p class="java">
             During recent years, the rate of heart attacks has been on the rise.
             In India alone, there were arround 28,449 deaths due to heart
             attacks. The edge that we have over other products is that we have
@@ -233,30 +133,34 @@
           </p>
         </div>
       </div>
-      <div class="card">
-        <img
-          class="card-img-top CardImage"
-          src="https://c4.wallpaperflare.com/wallpaper/391/960/943/love-wallpaper-preview.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title CardTitle">Easy to Use</h5>
-          <p class="card-text CardText">
+      <div class="face face2">
+        <h2>01</h2>
+      </div>
+    </div>
+
+    <div class="CustomCard">
+      <div class="face face1">
+        <div class="content">
+          <span class="stars"></span>
+          <h2 class="python">Easy to Use</h2>
+          <p class="python">
             Most people are apprehensive to visit a gloom environment like that
             of a hospital, so our product aims to eliminate the unease and
             instill comfort.
           </p>
         </div>
       </div>
-      <div class="card">
-        <img
-          class="card-img-top CardImage"
-          src="https://wallpaperaccess.com/full/3810369.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title CardTitle">Real Time</h5>
-          <p class="card-text CardText">
+      <div class="face face2">
+        <h2>02</h2>
+      </div>
+    </div>
+
+    <div class="CustomCard">
+      <div class="face face1">
+        <div class="content">
+          <span class="stars"></span>
+          <h2 class="cSharp">Real Time</h2>
+          <p class="cSharp">
             Our interactive website allows the user to enter his medical details
             such as oxygen %, heart rate, etc. and submit it. Our pre-trained
             machine learning model will accurately predict whether the person
@@ -265,320 +169,247 @@
           </p>
         </div>
       </div>
-    </div> -->
-
-    <!--* Description v2 -->
-    <div class="ColorGroup" id="features">
-      <div class="CustomContainer">
-        <div class="CustomCard">
-          <div class="face face1">
-            <div class="content">
-              <span class="stars"></span>
-              <h2 class="java">Brief Intro</h2>
-              <p class="java">
-                During recent years, the rate of heart attacks has been on the
-                rise. In India alone, there were arround 28,449 deaths due to
-                heart attacks. The edge that we have over other products is that
-                we have the luxury of a pre-trained model which can predict the
-                heart attack to a great extent.
-              </p>
-            </div>
-          </div>
-          <div class="face face2">
-            <h2>01</h2>
-          </div>
-        </div>
-
-        <div class="CustomCard">
-          <div class="face face1">
-            <div class="content">
-              <span class="stars"></span>
-              <h2 class="python">Easy to Use</h2>
-              <p class="python">
-                Most people are apprehensive to visit a gloom environment like
-                that of a hospital, so our product aims to eliminate the unease
-                and instill comfort.
-              </p>
-            </div>
-          </div>
-          <div class="face face2">
-            <h2>02</h2>
-          </div>
-        </div>
-
-        <div class="CustomCard">
-          <div class="face face1">
-            <div class="content">
-              <span class="stars"></span>
-              <h2 class="cSharp">Real Time</h2>
-              <p class="cSharp">
-                Our interactive website allows the user to enter his medical
-                details such as oxygen %, heart rate, etc. and submit it. Our
-                pre-trained machine learning model will accurately predict
-                whether the person will get heart attack or not. Based on the
-                result appropriate course of action will be provided to the
-                users.
-              </p>
-            </div>
-          </div>
-          <div class="face face2">
-            <h2>03</h2>
-          </div>
-        </div>
+      <div class="face face2">
+        <h2>03</h2>
       </div>
     </div>
+  </div>
+</div>
 
-    <form action="{{url_for('home_page')}}" method="post">
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Age</label>
-        <div class="col-sm-2">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            placeholder="Enter Age"
-            name="age"
-          />
-        </div>
-      </div>
+<form action="{{url_for('home_page')}}" method="post">
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-2">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        placeholder="Enter Age"
+        name="age"
+      />
+    </div>
+  </div>
 
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Gender</label>
-        <div class="col-sm-2">
-          <select
-            class="form-select border-dark"
-            aria-label="Default select example"
-            name="gender"
-          >
-            <option selected>Select Your Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-          </select>
-        </div>
-      </div>
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-2">
+      <select
+        class="form-select border-dark"
+        aria-label="Default select example"
+        name="gender"
+      >
+        <option selected>Select Your Gender</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+      </select>
+    </div>
+  </div>
 
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label"
-          >Chest Pain</label
-        >
-        <div class="col-sm-5">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            name="cp"
-            placeholder="Enter the type of Chest Pain "
-          />
-          <p class="text-danger">
-            Value 1: typical angina <br />
-            Value 2: atypical angina <br />
-            Value 3: non-anginal pain <br />
-            Value 4: asymptomatic
-          </p>
-        </div>
-      </div>
-
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label"
-          >Cholestrol level</label
-        >
-        <div class="col-sm-5">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            name="chol"
-            placeholder="Enter Your Cholestrol level"
-          />
-          <p class="text-primary">Cholestoral in mg/dl</p>
-        </div>
-      </div>
-
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label"
-          >Rest_Ecg</label
-        >
-        <div class="col-sm-5">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            name="restecg"
-            placeholder="Enter Rest_Ecg "
-          />
-          <p class="text-success">
-            Rest_Ecg : resting electrocardiographic results
-          </p>
-          <p class="text-primary">
-            Value 0: normal <br />
-            Value 1: having ST-T wave abnormality (T wave inversions and/or ST
-            elevation or depression of > 0.05 mV) <br />
-            Value 2: showing probable or definite left ventricular hypertrophy
-            by Estes' criteria
-          </p>
-        </div>
-      </div>
-
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Exang</label>
-        <div class="col-sm-5">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            placeholder="Enter Exang"
-            name="exang"
-          />
-          <p class="text-primary">
-            exang: exercise induced angina (1 = yes; 0 = no)
-          </p>
-        </div>
-      </div>
-
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">OldPeak</label>
-        <div class="col-sm-5">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            placeholder="Enter the OldPeak Value"
-            name="oldpeak"
-          />
-        </div>
-      </div>
-
-      <div class="row mb-3 my-5 mx-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Thall</label>
-
-        <div class="col-sm-5">
-          <input
-            type="text"
-            class="form-control border-dark"
-            id="inputEmail3"
-            placeholder="Enter the thalassemia Value"
-            name="thall"
-          />
-          <p class="text-primary">Thall - Thalassemia</p>
-        </div>
-      </div>
-
-      <button type="submit" class="btn btn-primary mx-3 my-5">Submit</button>
-    </form>
-
-    {% if result == 0 %}
-    <div
-      class="alert alert-warning alert-dismissible fade show space"
-      role="alert"
-    >
-      <strong>Great!</strong> You are doing well. Stay fit, Stay healthy.
-      <hr />
-      <p>
-        For further improvements in the you can refer the Dietary Plans we
-        <a href="{{url_for('blog_page')}}">have</a> provided. <br />Thank You!
-        😇
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Chest Pain</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        name="cp"
+        placeholder="Enter the type of Chest Pain "
+      />
+      <p class="text-danger">
+        Value 1: typical angina <br />
+        Value 2: atypical angina <br />
+        Value 3: non-anginal pain <br />
+        Value 4: asymptomatic
       </p>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
     </div>
+  </div>
 
-    {% endif %} {% if result == 1 %}
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static',filename='styles/dietary.css') }}"
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"
+      >Cholestrol level</label
+    >
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        name="chol"
+        placeholder="Enter Your Cholestrol level"
+      />
+      <p class="text-primary">Cholestoral in mg/dl</p>
+    </div>
+  </div>
+
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Rest_Ecg</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        name="restecg"
+        placeholder="Enter Rest_Ecg "
+      />
+      <p class="text-success">
+        Rest_Ecg : resting electrocardiographic results
+      </p>
+      <p class="text-primary">
+        Value 0: normal <br />
+        Value 1: having ST-T wave abnormality (T wave inversions and/or ST
+        elevation or depression of > 0.05 mV) <br />
+        Value 2: showing probable or definite left ventricular hypertrophy by
+        Estes' criteria
+      </p>
+    </div>
+  </div>
+
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Exang</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        placeholder="Enter Exang"
+        name="exang"
+      />
+      <p class="text-primary">
+        exang: exercise induced angina (1 = yes; 0 = no)
+      </p>
+    </div>
+  </div>
+
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">OldPeak</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        placeholder="Enter the OldPeak Value"
+        name="oldpeak"
+      />
+    </div>
+  </div>
+
+  <div class="row mb-3 my-5 mx-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Thall</label>
+
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control border-dark"
+        id="inputEmail3"
+        placeholder="Enter the thalassemia Value"
+        name="thall"
+      />
+      <p class="text-primary">Thall - Thalassemia</p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary mx-3 my-5">Submit</button>
+</form>
+
+{% if result == 0 %}
+<div class="alert alert-warning alert-dismissible fade show space" role="alert">
+  <strong>Great!</strong> You are doing well. Stay fit, Stay healthy.
+  <hr />
+  <p>
+    For further improvements in the you can refer the Dietary Plans we
+    <a href="{{url_for('blog_page')}}">have</a> provided. <br />Thank You! 😇
+  </p>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+{% elif result == 1 %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static',filename='styles/dietary.css') }}"
+/>
+<div
+  class="alert alert-warning alert-dismissible fade show bg-danger space"
+  role="alert"
+>
+  <strong class="text-warning">Oops!</strong>
+  <span class="text-warning">Your heart seems to be Unhealthy.</span>
+  <hr />
+  <p class="text-warning">
+    Please Contact the nearest Doctor as soon as possible.Take good care of
+    yourself,we have a well organised Dietary plan for you please do refer it
+    <a href="{{url_for('blog_page')}}">have</a><br />Thank You! Stay Healthy. 😇
+  </p>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+
+<div class="container toflex">
+  <a
+    href="https://www.google.com/maps/search/cardio+doctor+near+me/@13.022624,77.4330282,10z/data=!3m1!4b1"
+    target="_blank"
+    ><img
+      class="img-1 convert"
+      src="data:image/png;base64,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"
+      alt="Maps"
     />
-    <div
-      class="alert alert-warning alert-dismissible fade show bg-danger space"
-      role="alert"
-    >
-      <strong class="text-warning">Oops!</strong
-      ><span class="text-warning">Your heart seems to be Unhealthy.</span>
-      <hr />
-      <p class="text-warning">
-        Please Contact the nearest Doctor as soon as possible.Take good care of
-        yourself,we have a well organised Dietary plan for you please do refer
-        it <a href="{{url_for('blog_page')}}">have</a><br />Thank You! Stay
-        Healthy. 😇
-      </p>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
+
+    <h3 style="margin-top: 20px; color: green">
+      Click here to find your nearest clinic
+    </h3>
+  </a>
+</div>
+{% else %}
+<h1>Awaiting Result...</h1>
+{% endif %}
+
+<!--* Heart Animation -->
+<div class="enclose">
+  <div class="heart">Your Heart</div>
+</div>
+
+<!--* Footer -->
+<div>
+  <div id="footer">
+    <div id="end-center-left">
+      <h2>Working to keep you safe</h2>
+      <h4>Quintessential Coders &copy 2023</h4>
     </div>
 
-    <div class="container toflex">
-      <a
-        href="https://www.google.com/maps/search/cardio+doctor+near+me/@13.022624,77.4330282,10z/data=!3m1!4b1"
-        target="_blank"
-        ><img
-          class="img-1 convert"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABa1BMVEX////x8fH/4FEeo2LT09Mdo2IfpGPcSTzcSj0gpGTv7+8comFIifRHiPTcSDzcSz5JifTdTUAhpGTcSz/dTkGALCcAnWLm5ub49vH/5FGzx1j28vRDgODY2Nih1brQ0NDG1PJ+oNQ/snr/4z8+hvoAoFrS09mBwp+Vyaz/30D17tLe17owfvQAp2Pk6+ctfPTgYFbiZlzeV0zleG/mSEHB281ouI3V5NzdQTP1z8zoi4TqmZPxvLj87+7urqnlfnWJLyrBQjdWs4KqOjHaOSmp0bt4vphmuIzGOD1Mr3zhokjOvbzJNSfozlD55OPtqKOZ2LvQrp9ipXOniGjzx8RNnGTQeWh8k2aJkGezgGSgNzCJMCu1c1bIZVDXWkw1nGCRdlBWjFmrYEdugVPKW1LXm5euWETRiYXQbEDSgUTcq6jDUT7JcWvvwEy/KBflq0nUq4zBaWO8Nyzz33rv46DmyTro1X7iy1usvd1ELJRjAAAQGklEQVR4nNXd/V8bxxEHYMnldCfknCwkh7iq7IbmKiUNVIIIZDDGMm92IeTNiVs3cd6gTh3Xrd247Z/f3dPb3e3M7uyLEMwnv9ixEx6+s7N7L0Aud+Hr5PadT7Y2d9Z47Wxu3b1z+2TWH5K72n70yVqHVbu9Oqp2u81+Y+eT29uz/uDs6+Qu0zFaLfCDoDysIAh8v8agnfbO3Uud5TbnrdbCIKhmizt9zmx31u7UZ/2BGtbJJuf55bLAGwjLAyVDtrcuY5C3dzptxqtUKhBwJOTlh7V2e/OyGU92OqvlgPsQYYLIF2V59XIZtzc77XJQGZVSyCdPsNreujTr8Q7rz3KloiVkxkq782jWHzqptnc6tXKtRheOiAFbj5uXIMZHndWgUjMSBn642rk9a4Cqtto8QENhwMfq3VkTpFXfaZcrNQshq/bmrBWS2l5bDWqjMhWGq2sXdjGesD2wZi3ki/GCHsgZsFqzEw6Ifu1iEk86tVRZCMMLSdzOAFVCccufCDnxwq3FehZoJWTEtVmLsrVTq7gUMuIF2zS2UkNGc0OEhIyIbv0r3f2b51yffiYCrYXhKniAe+fm/aXzr8/bItBeGLaBafMp+98tUKs4qcK4fjUuD6wSUMtros+F0BeWYleDp/UZKEg/A8tfrE5HGFYy14s3nfrowi+hHnUiDNtTBVKFy19BPjfCcCsB3HcNJAqXH4M96khYntyeWnEOpArXwB51JOxNhs1hcTbC5T/DPkfC0B+F2HUPJAo7SISOhL2dUYSFGQkfYxFanktHwjAchLgyVaBEuPwVFqErYW8wTvejGQk/Rwapwwz9+OzWnFGGy39BIwSElaBcrdaq1YA/jipThb07XHh/qoMGPLYOMmyjwKywEtR2n1wf1JPdWkAWhh0uJG+GhcHR2SN8RijCx3iEaWGl0r93PVn3+n5AFPb4rCHpvChauH/Q4nVwuBRFJTmTIFz+OqQJg/5fr2eLGQWhDwn37pKEXrTQ7K7UJ7XSbS1JkYplGAvxOZMSVp4IPl67wxgVwl6HIPSigw2mys8nKl+vb7Q83EgQfv8RBVip3gOBLMbBywsKYdjbVgk9rzVfz/OaT1e+nr/plVRAdJQuf0Fq0hriGxMVQn/vtlxYjJpDXxbIqz7fjMCthiL8hjRoxCWYIPoEId/0ZQEubQx9oJAZNxagGAmDpkBahvAanKxFgrAjE0YHeTmQ9Wp+HTgSEYRfSpbhWNiXAq9f7yf2CkQY9iTCaH/sw4A8xpZIVA+a5ccUoQLI+lQp9PdOUGHUnQAlwvz8QnYtqpYhF34nGTQj4a5KmAoRHKU+HzV2wPqKACQJv5YMmhoxwnSIiJAdTdUtKhEyoCdpUvxE8032UYUIVK1CXlVfKdyChVFLBOaHJ5qEN08GZoVP1RHKB+mgdn3pMuTCTVBYuJ8F8lPMfnP9cL3Z6s6PkGCCNKEEOBQGsr1wVE/UwjVQGK2kgfn6RrMQRYN78xE/xuVRIElY+MjFMmQlF/JftCFhahHGlPUoafGi+xt1uEVTQPzyd0EtpCzD69cDXyVcBYTFpQxwP8pSPPZJgIGkCL1vXQmrKqFfA4TJjYIDD6A7OVFzCQTaCzVGKUVYFoXFh2ngIXyryoPv7yibdOrCUClMRIgmiBcJKF2HWsKyUgh0qVef+Pga1AIShZ5aKLk0TJS0SWPhU0HoNRNXhPkVAjB5qU9rUm+ZcHVIAT5RCkNxP4y6iXNM/RAeJ+YRDoX4mYZ4cTioXeWgAc40UeIgmt8w71Fpky5/oxZqnUtxoXAuZQe2xMH6IBNhUfL+gYdGCAh/IDyzUAPvAUeazDLs3c0KvVZCOJ+JsHi/iRfbH9URjoTfEYSE60O1cO9RVljanwjz3Yyw1Krj1SqRI/QKP36kBFaqJhEKQuEanw2aSZO2SoIQv1Tcj5AIIeGXBKEyxMklvkQo3KeJNhLCdY8uZIFT5wwvyuPfALsdPKgn0OVvZtCET0XhSkL4sGgqlEeI3y9NAlnRelQ2Sp8BwkTjLekINxChOGc8/FZUWig92FTVN2niQSPN0FioitArIM8tMhnixHvVQBFhfKLZE59bmHcpIgQjRBdiRljFHs08CeBHh1nhU/HZk3TSREQhEmFSuPxDQACyCqCJ2veRh6PZZXgGCGW7hVQ4mTQEYMn7EVqIgJDFmDXulgPs8W9GuAc8A5bu+FLhvp6wBLUpJOSvJ/THx/B7u/2A9HA0btLXOUDYTCDy4o6fT1VCWG9FdCA7zUJtCgNjZFDts6qWx1/WTVmGcZMKJ++HkpN3sZA+cKda+qCkEWEJbFNcOHiLppp4DYMgDOMmFa+e0tNjIUNMVjH5Z+tLnk6EjNgX7uzLhVX1mzTpZdg7zYHCRC7iNE037XrqOkQESiJkbSps+jCwAgopTbr3CBR6B8mFKL2LkdxZxqOUGmHJ+5YmNIuQN+lxDhSyi/xk70nuRJUOk0u2WdKLUJw1FcfCwZyBhPvJ3sPvJhZLK8l+9gpU4EjofV8lRAg3KWEZhi/riLC4lNr0sDvChaibbOdBk6JAIEIW4t+qU2xSflkBC9OzJk4RuL3tpYDs81DSjTAOsTK1Jg1fbqPCTIjQk5lCtLCR/EPDQ6kekIcIC2GgnnAcIfh0LXM440/XSokcvShqpR9919dL1B5NCpMhTi1CSFhMXkLFEdU3mow1OMdE0VJrPv0pGERY0I2w9Pavf6pOK8KznES4UFjKnrCHT7nX1w9a/DXFzLsL8XkGB2LCt3994x8PxK/BdyEc7YWYcCE6EC8ixm8qCK9m1JtChETglRt/r9o1KSI8fq4QLkQ38eskAdilA700kNUwRMcR9nMqYWbflwI3ooJBjw6BN/70oKIboVr48rZaSCbWV0r0RehlgYz4c9UiQuTV4Bc5gjB+a4iSoB3wSjxsHM+Zl9sk4UJ0OK+Mka1BORDu0QnwCh82ekClMDlm5O95l4pdeYz1vDhFJUAPArLqK79vEiHChPA0RxWyrX99BTfm690FF8Ab/3zgNMKXJ3QhizFqwka2O3Yfih1KWYQZICP+VDWLEBQeP8sJwsKC+JLoOMZSdNjNp08xefbrlf0l7pMDQaEAvHLjyoOyHKjTpP2cKFRUKSqt72+kv6LkYRT7nAAHm6KrJn0pfDsFtZAlHJ+3Dw/4w+z1h+wMHgH31cyBkz7VixASCj1K/Lon/g7C+OZDAXw+oQB6MuC4T40j9NEeJQqLUGV95sBRn9pHKPYoSQj6nAKHfWodIdCjaiHME30ZILQIJcC4TwkRKuYM0KMKIcJTBghGKAPG+z5CRICAMLvXK4SojhCgPjDuU8smPT6DgLBQopsWkFXfMsJTEJgVym2wzxHwxr9eQ31Kj3AOFqpJKp8j4Pt/aLwILSI8frbiQEjxGQN/PzfXB7+3NS3C07lFayHkcwpsHB1n+5QQ4UB4fGQrBHmizwbIiM98wwiPzxp2QtinClAXOCf0KTnC08achRDhKQMcCLWA2T6lzhnWo8ZCjDcVYLZPqRHyHjUT4jzA5wLI+9TXj5D3qL5QoiP5DIGsTwPtCI/mNIVSHOwDAzQAMuJ43y8TIxz0KCosMM/4H1JBPnfAxDylRjjoUVyoWSSfFbDx/FgKFCI8mnMoBH1ugYz4KtSIsPes4U5I9FkC5+ZuvQ7oPdof/zVbIcybBnCucRaSxowfP4ZpuBHSffZARjz1qRG+GgNthBgPDdASGG+KxAhvzdkKcR0eoC0w3hQ1x4yZUKaDv1uwI2A8bFQ7hZ8aM/pCuU7mcwHkwyYg9OjzRIRkoYqG+nSAH9QbKG5IHH1PNgzoJ04zUiEJpOEjAvN5BZGdbAJVj45PM46FoE8bqCYOdgxJhL0X6f+EGyHMg9+ykANVxMGOoRGhEyHiMwMqia98KTC1UzgRYjzxVS4iUEHkIcrGTHKzdyBEedm3DXWAKuKrUCdCGyHOswTKiSxE+Cth4QhNhTJd9o1ffaCCmAxRGaGJUK7L/DwHM6CcmAgxAwQi1BOqbILPGCglNk5DpEeBCElCCgzi2QBlxMZRzweBwl4oEdJREp8VUEr8GRb2XgF/x51Q8FkCJcTG8x4YYe9oekKRZw+UpchnjQAM+9BfcCGEeC6AOLHxrAdFeDYVIcwjAX+nAuJEtmGIEQJbhbUQ49GA7/72HZUQI7INQwBmL5vshTiPCHzvPWMimzVZYLgHbBXGQhmODrx61Zw4dywIwTljIFThdIAWxMaLXgYInWf0hBSaLtCc2PislwZiTYoJ6Rw7oEWKYUb4FGln90I9oDFx3KZDILwZTkOoCzQljqZpqGhS50J9oHGKx0kgNkmdC02AhkR2qZ8QYpPUtdAMaEZsnPWSPwAIa1K3QlOgGfFoL/m1dxjQqdAcaERs1CbAzNOYKQltgCZEtl9MmhTbK1wK7YAmxOcTIbpXOBTaAg2IR3sTIQp0JrQH6hMbVcIydCV0Abx69UM94mQh4ruhK6ET4LVrmkS2I46Ez6fcpY6A2sSjodCXDBonQmdAXeKtwahhG7/kGYADoQvgtVFpERvBUCgZNA6EToF6xMZpDPRlg8Ze6BioRWw86w2/1+MUhQ6A1zJFJ/Jhyi8S9ySj1FY4BeA1jX1xeJ0vG6WWQnug4LvGf5dKZBdQvHrg7XwXwmkBycRbsTCsyp6J2winABz/GxqxEXdp2JmS0BqIBUgnNp7GoxR+JGMtnC6QSHzFQ5Ruh+ZCW6Dou5b5ExTi2TELMf3GrCuhJVDtu3r1LQrx1evXx9ImNRWeB/AtEvHoDHo9wVpoB6T4OJBGVLxye8tIaAUEfBjQBdFIaAOEfGCHuiKaCF0D0QCdEA2EFkBagCmgNVFfaA4k+jJAW6K20BgI+pQB2hN1haZAqg8C2hE1hWZAmEf22RH1hEZAxKcDtCFqCU2AGj4J0IKoI9QHYjxtnwVRQ6gN1PKpgMZEulATiPIMfaz+aEQkC7WAOA/2kYCGRKpQAyjhWfkMG5UoJANlPFufWYo0IREo5SE+LSCReEtbSAOeg+8tYqPe0hQ6ALryGaRIEFoDEZ6RTz9FtdAWiPlMgbpEpdAOiPLMfbpEldAKOB2fJlEhtADiPFufHlEuNAZKeA58WkSp0BAo47nx6RBlQhOgVOfOp0GUCPWB58fjRdz6caEmUKFz7iMTUaEGUImbio9MRIREIAU3JR6ViD0/dPJC7JR9RCIiVPmowGnyqERY+LEL4LR5RCIs/Lc18Dx4NCIs/OV9K+B58Xgptv55GJj7QCZUAM+Tx0ueIjJocrk3ZsDz1qmJWIaSNkWBM9HFJWlUNMLcO1iIMHB2urjQFOdxIRaiCJwxblAYsYEDkQ0jBZw1K1lwozaQrWJYwK4/As7aAxSU4iI6ZoZLUSAy4KwheAnE+YZkEY4a9c3lAQrExYYiwbh+efPm0gBTxPlFQoCDTmXGofJ96uWSabkg8h81ubi42GgsymdMqj745T///ZjVu2/95sLXh/9r8FJNGFb/By8hKUhARXIRAAAAAElFTkSuQmCC"
-          alt="Maps"
-        />
-
-        <h3 style="margin-top: 20px; color: green">
-          Click here to find your nearest clinic
-        </h3>
-      </a>
+    <div id="end-center-right">
+      <h4>Contact Us</h4>
+      <div>Ph No: +9100000000</div>
+      <div>e-mail: inaheartbeat@gmail.com</div>
     </div>
+  </div>
 
-    {% endif %}
-
-    <!--* Heart Animation -->
-    <div class="enclose">
-      <div class="heart">Your Heart</div>
-    </div>
-
-    <!--* Footer -->
-    <div>
-      <div id="footer">
-        <div id="end-center-left">
-          <h2>Working to keep you safe</h2>
-          <h4>Quintessential Coders &copy 2023</h4>
-        </div>
-
-        <div id="end-center-right">
-          <h4>Contact Us</h4>
-          <div>Ph No: +9100000000</div>
-          <div>e-mail: inaheartbeat@gmail.com</div>
-        </div>
-      </div>
-
-      <div id="icons">
-        <img
-          class="img-1"
-          src="{{url_for('static', filename='images/facebook.png')}}"
-          alt="Facebook"
-        />
-        <img
-          class="img-1"
-          src="{{url_for('static', filename='images/linkedin.png')}}"
-          alt="Linkedin"
-        />
-        <img
-          class="img-1"
-          src="{{url_for('static', filename='images/insta.jfif.jpg')}}"
-          alt="Instagram"
-        />
-        <img
-          class="img-1"
-          src="{{url_for('static', filename='images/twitter.png')}}"
-          alt="Twitter"
-        />
-      </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+  <div id="icons">
+    <img
+      class="img-1"
+      src="{{url_for('static', filename='images/facebook.png')}}"
+      alt="Facebook"
+    />
+    <img
+      class="img-1"
+      src="{{url_for('static', filename='images/linkedin.png')}}"
+      alt="Linkedin"
+    />
+    <img
+      class="img-1"
+      src="{{url_for('static', filename='images/insta.jfif.jpg')}}"
+      alt="Instagram"
+    />
+    <img
+      class="img-1"
+      src="{{url_for('static', filename='images/twitter.png')}}"
+      alt="Twitter"
+    />
+  </div>
+</div>
+{% endblock content %}
