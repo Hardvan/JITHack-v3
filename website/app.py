@@ -19,8 +19,7 @@ def home_page():
     global cp
     result = -1
 
-    model = tf.keras.models.load_model(
-        "./Model/saved_model/my_model.h5")
+    model = tf.keras.models.load_model("./my_model.h5")
 
     if request.method == "POST":
         data_form = dict(request.form)
