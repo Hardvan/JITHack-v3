@@ -1,6 +1,9 @@
 # JIT Hackathon Files
 
-[Link to the website](http://inaheartbeat.pythonanywhere.com/)
+## Link to the website
+
+- On [Render](https://inaheartbeat.onrender.com/)
+- On [PythonAnywhere](http://inaheartbeat.pythonanywhere.com/)
 
 ## Problem Statement
 
