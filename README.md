@@ -16,6 +16,10 @@ Our interactive website allows the user to enter his medical details, such as ox
 Our pre-trained machine learning model will accurately predict whether the person will get heart attack or not.  
 Based on the result, appropirate course of action will be provided to the user.
 
+## Link to dataset
+
+[Heart.csv](https://www.kaggle.com/code/namanmanchanda/heart-attack-eda-prediction-90-accuracy/input)
+
 ## Tecnologies Used
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="50px" />
