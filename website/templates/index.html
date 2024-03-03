@@ -176,6 +176,38 @@
   </div>
 </div>
 
+<!-- Model Description -->
+<div class="container model-description">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">Model Description</h2>
+      <p>
+        The model was trained on a dataset containing various health-related
+        features, aiming to predict the likelihood of a heart attack. The
+        dataset included information such as age, sex, exercise-induced angina,
+        chest pain type, resting blood pressure, cholesterol levels, fasting
+        blood sugar, and other relevant factors. Three different models were
+        implemented for comparison: Naive Bayes, Random Forest, and a Deep
+        Learning model using Artificial Neural Networks (ANN). The dataset was
+        preprocessed by removing non-useful columns and exploring the data
+        through visualizations and statistical analysis. The Naive Bayes and
+        Random Forest models demonstrated decent performance, but the Deep
+        Learning model, implemented as an ANN, outperformed them in terms of
+        accuracy, precision, recall, and F1-score. The ANN architecture included
+        two hidden layers with 100 and 50 neurons, respectively, and a final
+        sigmoid activation layer for binary classification. The model was
+        trained on scaled data and exhibited robust performance during
+        evaluation. In conclusion, the Neural Network model proved to be the
+        most effective for predicting the likelihood of a heart attack in this
+        dataset, showcasing the superiority of deep learning techniques in
+        complex tasks. The model was saved for future use, providing a powerful
+        tool for heart attack prediction in clinical applications.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Input Form -->
 <form action="{{url_for('home_page')}}" method="post">
   <div class="row mb-3 my-5 mx-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Age</label>
@@ -309,6 +341,28 @@
 
   <button type="submit" class="btn btn-primary mx-3 my-5">Submit</button>
 </form>
+
+<!-- Redirect to Glucovisor -->
+<div class="container glucovisor">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">Glucovisor</h2>
+      <p>
+        Glucovisor is a web application that aims to predict the likelihood of a
+        person having diabetes. The model was trained on a dataset containing
+        various health-related features, aiming to predict the likelihood of
+        diabetes. Click the button below to be redirected to the Glucovisor
+        application.
+      </p>
+      <a
+        target="_blank"
+        href="https://glucovisor.onrender.com/"
+        class="btn btn-primary"
+        >Glucovisor</a
+      >
+    </div>
+  </div>
+</div>
 
 {% if result == 0 %}
 <div class="alert alert-warning alert-dismissible fade show space" role="alert">

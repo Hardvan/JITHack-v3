@@ -359,3 +359,45 @@
   );
   border-radius: 15px;
 }
+
+/* Model Description */
+.model-description h2 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  /* Hover Animation */
+  box-shadow: inset 0 0 0 0 #ffffff;
+  margin: 0 -0.25rem;
+  margin-top: 20px;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.model-description p {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+}
+
+/* Glucovisor */
+.glucovisor h2 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  /* Hover Animation */
+  box-shadow: inset 0 0 0 0 #ffffff;
+  margin: 0 -0.25rem;
+  margin-top: 20px;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.glucovisor p {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+}
+
+.glucovisor a {
+  /* Center */
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 200px;
+}
