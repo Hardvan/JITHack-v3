@@ -14,13 +14,13 @@ In India alone, there were around 28,449 deaths due to heart attacks.
 Most people are apprehensive to visit a gloom environment like that of a hospital, so our product aims to elimiate the unease and instill comfort.  
 Our interactive website allows the user to enter his medical details, such as oxygen %, heart rate, etc. and submit it.  
 Our pre-trained machine learning model will accurately predict whether the person will get heart attack or not.  
-Based on the result, appropirate course of action will be provided to the user.
+Based on the result, appropriate course of action will be provided to the user.
 
 ## Link to dataset
 
 [Heart.csv](https://www.kaggle.com/code/namanmanchanda/heart-attack-eda-prediction-90-accuracy/input)
 
-## Tecnologies Used
+## Technologies Used
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="50px" />
 <br>
